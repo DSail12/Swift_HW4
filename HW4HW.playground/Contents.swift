@@ -1,4 +1,4 @@
-// Создать перечисление с видами пиццы (хотя бы 4-5 кейсов).
+// 1. Создать перечисление с видами пиццы (хотя бы 4-5 кейсов).
 
 enum PizzaType {
     case margherita
@@ -8,7 +8,7 @@ enum PizzaType {
     case meat
 }
 
-//  Создать структуру пиццы, она должна содержать стоимость, вид пиццы, толстое или тонкое тесто и добавки (например, дополнительно добавить пепперони, помидоры, сыр). Вид пиццы должен быть вложенным типом для структуры пиццы. Подсказка: добавки лучше также сделать перечислением.
+// 2.Создать структуру пиццы, она должна содержать стоимость, вид пиццы, толстое или тонкое тесто и добавки (например, дополнительно добавить пепперони, помидоры, сыр). Вид пиццы должен быть вложенным типом для структуры пиццы. Подсказка: добавки лучше также сделать перечислением.
 
 enum Ingridients: String {
     case tomato
@@ -38,7 +38,7 @@ class Pizzeria {
     }
 
 
-//  4.Написать в классе пиццерии функции для добавления нового вида пиццы и для получения всех доступных пицц.
+// 4.Написать в классе пиццерии функции для добавления нового вида пиццы и для получения всех доступных пицц.
 
   func addPizza(pizza: Pizza) {
     self.pizza.append(pizza)
@@ -49,6 +49,7 @@ class Pizzeria {
          }
     }
 // 5.Создать экземпляр класса пиццерии и добавить в него несколько видов пицц.
- let pizza = [Pizza(cost: 120, type: .peperoni, isThin: true, add: [])], Pizza(cost: 100, type: .vegatarian, isThin: true, add: []), Pizza(cost: 90, type: .peperoni, isThin: false, add: [])]
+ let pizza = [Pizza(cost: 100, type: .pepperoni, isThin: true, add: []), Pizza(cost: 100, type: .vegetarian, isThin: true, add: []), Pizza(cost: 90, type: .pepperoni, isThin: false, add: [])]
  let pizzeria = Pizzeria(pizza: pizza)
- pizzeria.addPizza(Pizza(cost: 100, type: .peperoni, isThin: true, add: []))
+pizzeria.addPizza(pizza: Pizza(cost: 100, type: .pepperoni, isThin: true, add: []))
+
